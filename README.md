@@ -27,7 +27,8 @@ Milvus is an open-source vector database built to power embedding similarity sea
 
 3) Ranking: This a fast process where I will trade accuracy for efficiency and reduce the search space. Ranking is a more meticulous process to select and sort the top suggestions. Here I can use user features (age, gender, category affinity, engagement statistics, etc.) and video features (duration, type, language, number of impressions, etc.) to formulate it into a classification problem (whether the user will click on the video or whether the user will watch it for at least 30 seconds, etc. depending on the use case). The probabilities of this classification problem now serves as the ranking metric for our candidate set. XGBoost or LightGBM might be a good enough algorithm to start while building a classification model.
  
-  ![0_Zo-057DBvZthcmAY](https://user-images.githubusercontent.com/99263767/220314549-e962e3b4-056a-4eef-8519-8318d223b274.png)
+  ![0_mIeB8Uh1HJvZkVo9](https://user-images.githubusercontent.com/99263767/220325805-9cd79b99-90b2-4ac1-beb5-77f08c2d356a.png)
+
   
   Now I have successfully used the user and the video metadata to sort and pick the top recommendations for our user. After this if needed additional business logic can be added. To evaluate the quality of the recommendations I can use metrics such as recall@k, precision@k, NDCG and MRR and after I am are satisfied with the results I can do an online A/B test to validate our system. 
   
